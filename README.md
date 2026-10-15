@@ -1,17 +1,49 @@
-# React + Vite
+# Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Stack is a responsive technology explorer that helps developers compare popular tools and assemble a practical project stack. The interface follows a clean orange-to-pink-to-violet visual language inspired by the supplied design.
 
-Currently, two official plugins are available:
+## Built with
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React and Vite
+- CSS with responsive grid and flex layouts
+- React Toastify for friendly interaction messages
+- Lucide React icons
+- JSON technology data loaded with `fetch`
 
-## React Compiler
+## Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Explore 12 curated frontend, backend, database, language, styling, DevOps, and tool options.
+- Add technologies to a personal stack, remove individual choices, or clear the stack in one action.
+- Use the site comfortably on desktop, tablet, or mobile with a sticky responsive navigation bar.
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# DevStack" 
+```bash
+npm install
+npm run dev
+```
+
+Run `npm run build` to create a production build.
+
+## React questions
+
+### What is JSX, and why is it used in React?
+JSX is a syntax that lets us describe UI with HTML-like code inside JavaScript. It makes component layouts easier to read and write.
+
+### What is the difference between props and state?
+Props are values passed into a component by its parent. State belongs to a component and can change during use.
+
+### What does the `useState` hook do, and where did you use it in this project?
+`useState` stores values that can update the screen. I used it for the selected stack, loaded technology data, loading status, and mobile menu.
+
+### What does the `useEffect` hook do, and why did you need it to load the JSON data?
+`useEffect` runs side effects after rendering. It fetches the JSON file once when the app loads, then saves the result to state.
+
+### Why does every item in a `.map()` list need a unique `key` prop?
+Keys let React identify each item correctly when the list changes, so it can update only what is needed.
+
+### What is conditional rendering? Show one place you used it.
+Conditional rendering shows different UI based on a condition. The stack panel shows an empty message when no technology has been selected and shows stack items otherwise.
+
+### How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+The parent passes data and functions through props. A child calls a function prop, such as `onAdd`, to notify the parent about an action.
